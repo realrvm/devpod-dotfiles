@@ -1,0 +1,22 @@
+{
+  "shebang": {
+    "prefix": "shebang",
+    "body": "#!/bin/sh"
+  },
+  "rafct": {
+    "prefix": "rafct",
+    "body": "type Props = {};\n\nexport default function ${TM_FILENAME_BASE/(.*)/${1:/upcase}/} ({}: Props)  {\n\treturn (\n\t\t<>\n\t\t\t$0\n\t\t</>\n\t)\n}"
+  },
+  "rafcu": {
+    "prefix": "rafcu",
+    "body": "import { FC } from 'react';\n\nimport styles from './styles.module.scss';\n\ntype ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}Props = {\n\tclassName?: string;\n};\n\nexport const ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}:FC<${TM_FILENAME_BASE/(.*)/${1:/upcase}/}Props> = ({ className }) => {\n\treturn (\n\t\t<>\n\t\t\t$0\n\t\t</>\n\t)\n}"
+  },
+  "ts": {
+    "prefix": "ts",
+    "body": "import {${TM_FILENAME_BASE/(.*)/${1:/upcase}/}} from './${TM_FILENAME_BASE/(.*)/${1:/upcase}/}';\n\ndescribe('${TM_FILENAME_BASE/(.*)/${1:/upcase}/}', () => {\n\ttest('...', () => {\n\t\texpect(true).toBe(true);\n\t});\n});"
+  },
+  "nt": {
+    "prefix": "nt",
+    "body": "outline: 1px solid #90EE90;"
+  }
+}
